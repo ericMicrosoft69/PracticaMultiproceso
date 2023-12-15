@@ -14,15 +14,14 @@ public class VocalCounter {
             String line;
             String textoCompleto = "";
             while ((line = br.readLine()) != null) {
-                 textoCompleto += br.readLine();
+                textoCompleto += br.readLine();
 
                 for (int i = 0; i < textoCompleto.length(); i++) {
-                    if (textoCompleto.toLowerCase().charAt(i) == vocal)
-                        contadorVocal++;
+                    if (textoCompleto.toLowerCase().charAt(i) == vocal) contadorVocal++;
 
                 }
             }
-            System.out.println("El número de "+vocal+" es "+contadorVocal);
+            System.out.println("El número de " + vocal + " es " + contadorVocal);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
